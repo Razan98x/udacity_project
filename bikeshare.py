@@ -176,14 +176,14 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df,city)
-        i=5
+        rows=5
 
         while True:
             user_chose=input('do you wanna see the data enter YES or NO :')
 
             if user_chose.lower() == 'yes':
-                print(df.head(i))
-                i+=5
+                print(df.head(rows))
+                rows+=5
                 continue
             else:
                 print('\n ')
