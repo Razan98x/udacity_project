@@ -18,12 +18,20 @@ def get_filters():
         city=city.lower()
 
     # get user input for month (all, january, february, ... , june)
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> documentation
     while True:
         month=str(input('wwich month?  january , februrary, march ,aprill, may ,june or all ')).lower()
         if month in ('all','january', 'february','march', 'april', 'may', 'june'):
             break
+<<<<<<< HEAD
         else: 
+=======
+        else:
+>>>>>>> documentation
             print('invalid value')
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
@@ -65,7 +73,11 @@ def load_data(city, month, day):
         df=df[df['month']==month]
 
     df=df[df['day of week']==day]
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> documentation
 
 
     return df
@@ -79,7 +91,11 @@ def time_stats(df):
     # display the most common month
     common_month=df['month'].mode()[0]
     print('most common month is : ',common_month)
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> documentation
     # display the most common day of week
     common_dow=df['day of week'].mode()[0]
     print('most common day of week is : ',common_dow)
@@ -128,7 +144,11 @@ def trip_duration_stats(df):
     print('total travel time : ',total_travel)
 
 
+<<<<<<< HEAD
     # display mean travel time 
+=======
+    # display mean travel time
+>>>>>>> documentation
     mean_travel=df['Trip Duration'].mean()
     print('Average trip duration : ', mean_travel)
 
@@ -147,7 +167,11 @@ def user_stats(df,city):
     user_count=df['User Type'].value_counts()
     print('count of user type : ',user_count)
 
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> documentation
 
     if city == 'washington':
         print('there is NO gender and birth of year on this data:)')
@@ -156,13 +180,21 @@ def user_stats(df,city):
         print('count of Gender : ',gender_count)
         # Display earliest, most recent, and most common year of birth
         common_year=df['Birth Year'].mode()[0]
+<<<<<<< HEAD
         print('most common year of birth : ',common_year) 
+=======
+        print('most common year of birth : ',common_year)
+>>>>>>> documentation
 
         earliest_year=df['Birth Year'].min()
         print('The earliest year of birth : ',earliest_year)
 
         recent_year=df['Birth Year'].max()
+<<<<<<< HEAD
         print('The recent year of birth : ',recent_year) 
+=======
+        print('The recent year of birth : ',recent_year)
+>>>>>>> documentation
 
 
 
@@ -180,7 +212,14 @@ def main():
         trip_duration_stats(df)
         user_stats(df,city)
         i=5
+<<<<<<< HEAD
         
+=======
+
+        # ask the user if he wants to see the head of data just the 5 rows
+        # and increase every time he enter yes
+
+>>>>>>> documentation
         while True:
             user_chose=input('do you wanna see the data enter YES or NO :')
 
@@ -191,7 +230,11 @@ def main():
             else:
                 print('\n ')
                 break
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> documentation
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
